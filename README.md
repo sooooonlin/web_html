@@ -4,6 +4,6 @@
 # 23/06/19~23/06/20
 
 ```
-html5 doctypehtmlheadmetatitlebody
-h1~h6pstrongemsupshbsdelcodeblockquoteqaddresshr&lt; &gt; &copy; &amp;
+html5 doctype html head meta title body
+h1~h6pstrong em sup shb code blockquote q addresshr &lt; &gt; &copy; &amp;
 ```
