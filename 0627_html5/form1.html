@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>form-1</title>
+</head>
+<body>
+    <h1>form 입력,선택 컨트롤 하는 양식</h1>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>로그인양식</legend> <!--숨김대상-->
+            <!--컨트롤 요소 배치 위치(block)-->
+            <ul>
+                <li><input type="text" name="user_name" placeholder="이름"></li>
+                <li><input type="text" name="user_id" placeholder="아이디" ></li> 
+                <li><input type="password" name="user_pw"placeholder="비밀번호"></li>
+                <li>
+                    성별 :
+                    <label for="male">남 <!--1번방법-->
+                    <input type="radio" name="gender" value="male" id="male"></label>
+                    <label for="female">여
+                    <input type="radio" name="gender" value="female" id="female"></label>
+                </li>
+                <li>정보 저장 동의:
+                    <label for="agree">동의함
+                    <input type="radio" name="agree_g" value="agree" id="agree"></label>
+                    <!-- <label>동의함
+                        <input type="radio" id="agree" name="agree_g">
+                    </label> --> <!--2번방법 label로 묶으면 for를 쓰지 않아도 됨-->
+                    <label for="dgree">동의안함
+                    <input type="radio" name="agree_g" value="dgree" id="dgree"></label>
+                </li>
+                <li>
+                    관심사(2개 이상 선택하세요)
+                    <label> 영화
+                        <input type="checkbox" name="Interest" value="movie" id="movie">
+                    </label>
+                    <label>운동
+                        <input type="checkbox" name="Interest" value="sports" id="sports">
+                    </label>
+                    <label>독서
+                        <input type="checkbox" name="Interest" value="book" id="book">
+                    </label>
+                </li>
+                <li>
+                    첨부파일 <input type="file">
+                </li>
+            </ul>
+            <p>
+                <button type="submit">가입</button>
+                <button type="reset">가입취소</button>
+            </p>
+        </fieldset>
+    </form>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>로그인양식</legend>
+            <!--컨트롤 요소 배치 위치-->
+            <ul>
+                <li><input type="text" name="user_name" placeholder="이름"></li>
+                <li><input type="text" name="user_id" placeholder="아이디"></li>
+                <li><input type="password" name="user_pw" placeholder="비밀번호"></li>
+            </ul>
+            <ul>
+                <li>
+                    성별:
+                    <label for="male">남
+                    <input type="radio" name="gender" value="male" id="male"></label>
+                    <lable for="female">여
+                    <input type="radio" name="gender" value="female" id="female"></lable>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    정보 저장 동의:
+                    <label for="agree">동의함
+                    <input type="radio" name="agree_g" value="agree" id="agree"></label>
+                    <label for="d_agree">동의안함
+                    <input type="radio" name="agree_g" value="d_agree" id="d_agree"></label>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    관심사(2개 이상 선택하세요)         <!--복수선택시 lnput type=checkbox-->
+                    <lable for="movie1">영화    <!--단수선택시 input type=radio-->
+                    <input type="checkbox" name="hobby" id="movie1" value="movie"></lable>
+                    <lable for="sports1">운동
+                    <input type="checkbox" name="hobby" id="sports1" value="sports"></lable>
+                    <lable for="book1">독서
+                    <input type="checkbox" name="hobby" id="book1" value="book"></lable>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    첨부파일 <input type="file">
+                </li>
+            </ul>
+            <p> <!--1개이기때문에 ul안쓰고 p-->
+                <button type="submit">가입</button>
+                <button type="reset">가입취소</button>
+            </p>
+        </fieldset>
+    </form>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>로그인양식</legend>
+            <!--컨트롤 요소 배치 위치-->
+            <ul> 
+                <li><input type="text" name="user_name" placeholder="이름"></li>
+                <li><input type="text" name="user_id" placeholder="아이디"></li>
+                <li><input type="password" name="user_pw" placeholder="비밀번호"></li>
+            </ul>
+            <ul>
+                <li>
+                    <label>남
+                        <input type="radio" name="gender" value="male" id="male"></label>
+                    <label>여
+                        <input type="radio" name="gender" value="female" id="female"></label>
+                    <label>공개안함
+                        <input type="radio" name="gender" value="private" id="gender">
+                    </label> 
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    정보저장동의:
+                    <label for="">동의함
+                        <input type="radio" name="agree_g" value="agree" id="agree">
+                    </label>
+                    <label for="">동의안함
+                        <input type="radio" name="agree_g" value="dagree" id="dagree">
+                    </label>
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>로그인양식</legend>
+            <!--컨트롤 요소 배치 위치-->
+        </fieldset>
+    </form>
+</body>
+</html>
