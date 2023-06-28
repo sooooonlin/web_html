@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>로그인 | 웹접근성연구소</title>
+    <link href="./reset.css" rel="stylesheet">
+    <style>
+        /*header*/
+        header {}
+        header #search_frm {}
+        header #search_frm fieldset {}
+        header #search_frm fieldset legend {}
+        header #search_frm fieldset input {}
+        header #search_frm fieldset button {} 
+
+        /*aside*/
+        main {} /*main 이미 단독선언됐으므로 아래에 안적어도됨*/
+        main aside {}
+        main aside h2 {}
+        main aside ul {}
+        main aside ul li {}
+        main aside ul li a {} /*a는 li의 자식*/
+
+        /*section*/
+        main section {}
+        main section .title_path {}
+        main section .title_path h1 {}
+        main section .ttiel_path .bread_crumbs {}
+
+        /*login_box*/
+        main section .contents {}
+        main section .contents .login_box {}
+        main section .contents .login_box h2 {}
+        main section .contents .login_box h2 span {}
+        main section .contents .login_box > p {} /*자식인 p와 자손인 p은 중복되므로 ">"를 사용한다*/
+        main section .contents .login_box #login_frm {}
+        main section .contents .login_box #login_frm fieldset {}
+        main section .contents .login_box #login_frm fieldset legend{}
+        main section .contents .login_box #login_frm fieldset ul {}
+        main section .contents .login_box #login_frm fieldset ul li {}
+        main section .contents .login_box #login_frm fieldset ul li span {}
+        main section .contents .login_box #login_frm fieldset ul li input {}
+        main section .contents .login_box #login_frm fieldset p {}
+        main section .contents .login_box #login_frm fieldset p button {} /*자식인 p와 자손인 p은 중복되므로 ">"를 사용한다*/
+        main section .contents .login_box .join_id_pw_search {}
+        main section .contents .login_box .join_id_pw_search a {}
+        
+        
+        /*info*/
+        main section .contents #top_btn {}
+        main section .contents .web_info {}
+        main section .contents .web_info p {}
+        main section .contents .web_info p em {} /*br은 선택자로 적지 않는다!!*/
+    </style>
+</head>
+<body>
+    <header>
+        <form action="#" method="get" id="search_frm"> <!--form이 두개 이므로 단순 폼이 아니라 id를 줘서 의미있게 표현--> <!--form이 id를 갖고 있으므로 #-->
+            <fieldset>
+                <legend>검색양식</legend>
+                <input type="search" name="user_search" placeholder="검색어 입력">
+                <button type="submit">검색</button>
+            </fieldset>
+        </form>
+    </header>
+    <main>
+        <aside>
+            <h2>회원관련</h2> <!--연속된 목록-->
+            <ul>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#"></a>로그인</li>
+                <li><a href="#"></a>ID/PW 찾기</li>
+            </ul>
+        </aside>
+        <section>
+            <div class="tilte_path"><!--제목과 경로-->
+                <h1>로그인</h1> <!--대제목-->
+                <p class="bread_crumbs">홈 &lt; 회원관련 &lt; 로그인</p> <!--선택되는 부분(링크)이 없으니까 <p>/ '경로'라는 의미를 알수있게 bread_crumbs -->
+            </div>
+            <div class="contents"> <!--크게 묶어주기-->
+                <div class="login_box">
+                    <h2>Member <span>Login</span></h2>
+                    <p>비회원이신 분은 아래 회원가입을 이용 바랍니다.</p>
+                    <form action="#" method="post" id="login_frm">
+                        <fieldset>
+                            <legend>로그인양식</legend>
+                            <ul>
+                                <li>
+                                    <span>아이디</span>
+                                    <input type="text" name="user_id">
+                                </li>
+                                <li>
+                                    <span>비밀번호</span>
+                                    <input type="password" name="user_pw">
+                                </li>
+                            </ul>
+                            <p><button type="submit">로그인</button></p>
+                        </fieldset>
+                    </form>
+                    <div class="join_id_pw_search"> <!--회원가입,아이디비밀번호찾기 -> 바로옆이라서 1개로 묶어주기-->
+                        <a href="#">회원가입하기</a>
+                        <a href="#">아이디,비밀번호찾기</a>
+                    </div> 
+                </div>
+                <a href="#" id="top_btn">위로</a> <!--위로 이동하기 때문에 button이 아니라 a태그/의미를 알수있게 id(단독이라서)-->
+                <div class="web_info"> <!--p를 쓰면 p*3+br*2/div는 p*3-->
+                    <p>웹의 힘은 그것의 보편성에 있다. 장애에 구애없이 모든 사람이 접근할 수 있는 것이 필수적인 요소이다.</p>
+                    <p>(The power of the Web is in its universality, Access by everyone regardless of disability is an essential aspect.)</p>
+                    <p><em>팀 버너스 리 경 - 웹의 창시자 (Tim Berners - Lee , W3C Director and inventor of the World Wide Web)</em></p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
