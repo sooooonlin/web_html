@@ -1,0 +1,64 @@
+/*header*/ /**/
+header { 
+    background-color: lightgreen;
+    
+}
+header h1{}
+header h1 a{}
+header h1 a img{}
+/*header - nav*/
+header nav{background-color:lightcoral;
+    float:right;
+}
+header nav ul {
+}
+header nav ul li{}
+header nav ul li a{}
+/*header - lnb*/
+header .lnb{
+    background-color: lightseagreen;
+    
+}
+header .lnb li{}
+header .lnb li a{}
+/*main-경로*/
+main{
+    background-color: lightblue;
+}
+main .breadcrumbs_bg{background-color: #f1f1f1;}
+main .breadcrumbs_bg .breadcrumbs{}
+main .breadcrumbs_bg .breadcrumbs a{}
+main .breadcrumbs_bg .breadcrumbs em{}
+/*main contents1*/
+main .contents1 {background-color:lightpink }
+main .contents1 h1{}
+main .contents1 p{}
+/*main .contents2*/
+main .c2_bg {background-color: #f1f1f1;}
+main .c2_bg .contents2 {}
+main .c2_bg .contents2 p {}
+/*main .contents3*/
+main .contents3 {}
+main .contents3 h2 {color: #36b4e5;}
+main .contents3 p {} /*main .contents3 h2+p {} // h2와 가장 근접한 p태그-인접자태그*/
+/*main .contents4*/
+main .c4_bg {background-color: #f1f1f1;}
+main .c4_bg .contents4 {}
+main .c4_bg .contents4 h2 {}
+main .c4_bg .contents4 ul {}
+main .c4_bg .contents4 ul li {}
+main .c4_bg .contents4 ul li h3 {}
+main .c4_bg .contents4 ul li p{}
+/*footer*/
+footer {background-color:lightgrey;}
+footer .f_top{}
+footer .f_top .fnb{}
+footer .f_top .fnb li{}
+footer .f_top .fnb li a{}
+footer .f_top .site{}
+footer .f_top .site li{}
+footer .f_top .site li a{}
+footer .f_top .f_btm{}
+footer .f_top .f_btm address{}
+footer .f_top .f_btm p{}
+
