@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,th.htd{
+            border-collapse:collapse;
+            border:1px solid black;
+        }
+        #t {} /*padding 10px */
+        #t thead {}
+        #t thead tr th:nth-child(1) {background-color: yellow; /*tr은 1개이므로 nth따로 적을 필요 xx th는 따로 하나 더 있기때문에 nth를 붙여 선택자를 정해야한다.*/
+            border:1px solid black;}
+        #t tbody tr:nth-child(1) td:nth-child(2){background-color:aqua;
+            border:1px solid black;}
+        #t tbody tr:nth-child(2) td:nth-child(1){background-color:pink;
+            border:1px solid black;}
+        #t tbody tr:nth-child(3) td:nth-child(2){background-color:lime;
+            border:1px solid black;}
+    </style>
+    <!--t thead tr th:nth-child(1) {}-->
+</head>
+<body>
+    <table id="t">
+        <thead>
+            <tr>
+                <th scope="col">HTML5</th> <!--제목--> <!--노랑-->
+                <th scope="col">CSS3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>header</td>
+                <td>nth-child</td> <!--핑크-->
+            </tr>
+            <tr>
+                <td>main</td> <!--아쿠아-->
+                <td>display</td>
+            </tr>
+            <tr>
+                <td>footer</td>
+                <td>border</td> <!--그린-->
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
