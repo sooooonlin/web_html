@@ -1,0 +1,249 @@
+/*header*/ /**/
+header { 
+    background-color: lightgreen;
+    width: 1200px; height:92px;
+    margin: 0 auto;
+    /*사용자에 따라 바뀌게 가운데 진열*/
+}
+header h1{
+    width:60px; height: 70px;
+    float:left; /**/
+    margin: 11px; 0 0 20px;
+} /*header의 자식이자 img부모 (px)*/
+header h1 a{
+} /* /link임 / header의 자손이자 h1의 자식/ a는 크기없음->inline태그이므로 100%를 가질수없고 내용만큼만 가진다.*/
+header h1 a img {
+    background-color: blue;
+    width: 100%;
+}
+/*부모의 너비(header h1-width:60px;)만큼 차지 하란 뜻으로 100% 값부여/너비를 맞추면 높이는 비율적으로 따라오므로 높이 적을 필요없음 */
+/*img태그는 인라인 요소지만px크기를 절대값으로 가진다.그래서 부모요소의 크기가 변경되도 자동으로 따라오지
+않기 때문에 width:100%속성으로 상대값으로 변경하여 부모의 px을 상대적으로 인식하게 하는 경우가 많다.*/
+
+/*header - nav*/
+header nav{ /*폰트 넣는거 잊지말기*/
+    background-color:lightcoral;
+    margin: 39px 0 0 234px;
+    float:left; /**/
+    
+}
+header nav ul {}
+header nav ul li:last-child a {padding-right: 0;}  /*마지막 li의 자식 a의 여백을 없앰/왜냐면 a에게 padding값을 줬기때문.그리고 a에겐 마지막 자식이 없으므로 li에 last-child를 붙이게 됨*/
+header nav ul .active a {color: #36b4e5;} /* a까지 잡은이유 :대상자와 가장 가깝게 있기때문에*/
+header nav ul li{float: left;} /*나열을 할땐 묶여있는 형제관계를 선택*/
+header nav ul li a{ padding-right: 40px; /*개인으로 있는 a에게 간격을 준다*/
+    font-size:1.2rem; /*레귤러는 기본사이즈므로 값 줄 필요없음*/} 
+/*활성화 페이지 기준으로 active class 선택자 작성한다/ company혼자 색이 다른이유*/
+
+/*header - lnb*/
+header .lnb{
+    background-color: lightseagreen;
+    float: right; /**/
+    margin:39px 20px 0 0;
+}
+header .lnb li{
+    float: left;
+    margin-right: 20px;
+} /*float의 값을 right를 주지 않은 이유:lnb의 태그안에서 왼쪽에서 1. 오른쪽 2 이렇게 읽히기 때문에*/
+/*모든 li에 반복적으로 들어간 margin 또는 padding 값에서 마지막 여백값만 빼는 방법!
+*/
+header .lnb li:last-child {margin-right:0;} /*last-child:마지막 자식*/
+header .lnb li a{
+    font-size:1.2rem;
+}
+header .lnb li span{
+    width: 1px; height: 13px; /*피그마에선 너비 13이지만 css를 할땐 선을 면이라고 인식하기 때문에 border가 아닌 면으로 값을 매겨야 하므로 (가로)w-1 (세로)h-13으로 인식한다.*/
+    background-color: #000;
+    display:block; /*dispaly:block를 쓸땐 span이 가진 인라인특성으로 인해 화면상에선 보이지 않으니까 block로 바꿔서 블록의 특징으로 보이게 해준다.*/
+    margin-top:8px; /*크기나 위치가 맞지않으면 css로 직접 추가해야한다고함!*/
+} /*customer과 검색 사이 세로 선은 면으로 인식함(border라고 하면 안됨!!*/
+/*main-경로*/
+main{
+    background-color: lightblue;
+}
+main .breadcrumbs_bg{
+    height: 58px;
+    /*block태그는 기본이 100%이기 때문에 따로 너비를 적어주지않아도 된다*/
+    background-color: #f1f1f1;
+    border: 1px solid #aaa;
+    border-left:0;
+    border-right:0; /*border-left border-rigth로 적어도 되지만 위의 방법이 맞다고함*/
+    /*border-right:1px solid #aaa; border-left:1px solid #aaa;*/
+}
+/*특정방향에만 선이 들어갈때 border-방향:두께 모양 색상*/
+main .breadcrumbs_bg .breadcrumbs{
+    width:1180px; height:58px; /**/
+    margin:0 auto; /*화면을 어느정도의 크기로 보든 상관없이 자동으로/1440에 1200을 빼는게 아니라 사용자에 맞춰서 보여줘야함*/
+    text-align: right; /**/ /*정렬대상이 모두 인라인이고 한 방향 수평 정렬일 경우 정렬대상의 부모요소한테 text-align을 사용한다*/
+    padding: 23px 20px 0 0;
+}
+main .breadcrumbs_bg .breadcrumbs a{
+    /* /연걸된 css에 기본값 적용되어있으므로 안적어도 됨/font-size: 1rem;이라 */
+}
+main .breadcrumbs_bg .breadcrumbs em{
+    font-size: 1rem;
+    font-weight:700;
+}
+/*main contents1*/
+main .contents1 {background-color:lightpink;
+    width:1200px;
+    padding:70px 0; /*padding의 값에 따라 안의 크기도 달라짐(안에서 커지기 때문에)*/
+    margin: 0 auto; text-align: center;
+
+}
+main .contents1 h1{
+    font-size:2.074rem;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    margin-bottom: 40px; 
+    
+} /*태그는 블록이지만 글자는 인라인으로 인식*/
+main .contents1 p{
+    font-size: 1.2rem;
+    letter-spacing: -0.02em;
+}
+/*main .contents2*/
+main .c2_bg {
+    background-color: #f1f1f1;
+} 
+main .c2_bg .contents2 {
+    background-color:lightcoral;
+    width: 1200px;
+    padding:70px 0;
+    margin: 0 auto; text-align:center;
+}
+main .c2_bg .contents2 p {
+    font-size:1.2rem;
+    letter-spacing: -0.02em;
+    line-height: 35px;
+}
+/*main .contents3*/
+main .contents3 {
+    width: 1200px;
+    padding:70px 0; /*상하 좌우*/
+    margin: 0 auto; text-align: center; /*글씨가운데정열*/
+}
+main .contents3 h2 {
+    margin-bottom: 50px;
+    color: #36b4e5;
+    font-weight: 500;
+    font-size:2.074rem;
+    letter-spacing: -0.02em;
+}
+main .contents3 h2+p {
+    font-size: 1.728rem;
+    line-height: 45px;
+    letter-spacing: -0.02em;
+}
+main .contents3 p:nth-child(2) {margin-bottom: 50px;} /*자식중 2번째자식이란뜻 /수열 선택자*/
+ /*main .contents3 h2+p {} // h2와 가장 근접한 p태그-인접자태그*/
+/*main .contents4*/
+main .c4_bg {
+    background-color: #f1f1f1;
+}
+main .c4_bg .contents4 {
+    background-color: bisque;
+    width: 1200px;
+    padding: 70px 0;
+    margin: 0 auto;
+    text-align: center;
+}
+main .c4_bg .contents4 h2 {
+    font-size: 2.074rem;
+    font-weight: 500;
+    margin-bottom: 60px;
+}
+/*goal ul-li*/
+main .c4_bg .contents4 ul:nth-child(2) {
+}
+main .c4_bg .contents4 ul:nth-child(2) li { /*모든 li*/
+    background-color: #ffffff;
+    width: 250px; height: 250px; 
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    line-height: 250px; /*'한 줄' 일때 높이값과 동일하게 줘야 중앙에 정렬됨*/
+    margin-left: -15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    font-size: 2.074rem;
+    margin-bottom: 60px;
+    
+}
+main .c4_bg .contents4 ul:nth-child(2) li:nth-child(1) {
+    background-color: #36b4e5;
+}
+main .c4_bg .contents4 ul:nth-child(2) li:nth-child(3) {
+    background-color: #f3c300;
+}
+/*strategy ul-li*/
+main .c4_bg .contents4 ul:nth-child(4) {}
+main .c4_bg .contents4 ul:nth-child(4) li{
+    width: 180px; height: 180px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #fff;
+    text-align: center;
+    padding-top: 55px;
+    margin-left: -10px;
+    letter-spacing: -0.02em;
+    
+
+    /* box-shadow: x y Blur color; */
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+main .c4_bg .contents4 ul:nth-child(4) li h3{
+}
+main .c4_bg .contents4 ul:nth-child(4) li p{
+    font-size: 1.2rem;
+    letter-spacing: -0.02em;
+}
+/*footer*/
+footer {background-color:lightgrey;}
+footer .f_top{
+    background-color: #aaa;
+    width: 1200px; height: 60px;
+    margin: 0 auto;
+    padding-top: 13px;
+}
+footer .f_top .fnb{
+    float: left;
+    margin-top: 10px;
+}
+footer .f_top .fnb li{
+    float: left;
+    /*margin: 23px 0 0 20px;*/}
+footer .f_top .fnb li a{
+    padding-right: 30px; 
+}
+
+footer .f_top .site{
+    float: right;
+}
+footer .f_top .site li{
+    float: left;
+    margin-right: 10px;
+    border:1px solid #000;
+}
+footer .f_top .site li:last-child {margin-right: 0;}
+footer .f_top .site li a{
+    padding: 10px 20px; 
+    display: block;
+}
+footer .f_btm{
+    background-color: aqua;
+    padding: 70px 0;
+    width: 1200px;
+    margin: 0 auto;
+}
+footer .f_btm address{
+    line-height: 40px;
+    font-size: 1.2rem;
+    letter-spacing: -0.02em;
+    padding-bottom: 50px;
+}
+footer .f_btm p{
+    line-height: 40px;
+    font-size: 1.2rem;
+    letter-spacing: -0.02em;
+}
+
