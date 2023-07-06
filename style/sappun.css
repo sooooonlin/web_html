@@ -1,0 +1,65 @@
+header {;}
+header p{
+    
+}
+header p a{
+    background-color: ;#D9D9D9
+}
+header .h_top{}
+header .h_top h1{}
+header .h_top h1 a{}
+header .h_top h1 a img{}
+
+header .h_top .lnb{background-color: lightcoral;}
+header .h_top .lnb .lnb_left{}
+header .h_top .lnb .lnb_left li{}
+header .h_top .lnb .lnb_left li a{}
+header .h_top .lnb .lnb_left li a span{}
+header .h_top .lnb .lnb_right{}
+header .h_top .lnb .lnb_right li{}
+header .h_top .lnb .lnb_right li a{}
+header .h_top .lnb .lnb_right li a img{}
+
+header nav {background-color: lightgreen;}
+header nav ul{}
+header nav ul li{}
+header nav ul li a{}
+
+aside{background-color: lightpink;}
+aside a {}
+aside a img{}
+
+main{background-color: lightsalmon;}
+main .bnr_top{}
+main .bnr_top .main_bnr {}
+main .bnr_top .main_bnr a{}
+main .bnr_top .main_bnr a img{}
+main .bnr_top .bnr2{}
+main .bnr_top .bnr2 a{}
+main .bnr_top .bnr2 a img{}
+
+main .item_warp {background-color: lightskyblue;}
+main .item_warp h1{}
+main .item_warp .best_item {}
+main .item_warp .best_item li{}
+main .item_warp .best_item li a{}
+main .item_warp .best_item li h2{}
+main .item_warp .best_item li p{}
+main .item_warp .best_item li p em{}
+main .item_warp .best_item li .item_top{}
+main .item_warp .best_item li .item_top p {}
+main .item_warp .best_item li .item_btm {}
+main .item_warp .best_item li .item_btm span {}
+
+main .item_warp .sappun_made_bnr {}
+main .item_warp .sappun_made_bnr img {}
+main .item_warp .sappun_made_bnr h1 {}
+main .item_warp .sappun_made_bnr a {}
+
+footer {background-color: lightslategray;}
+footer .f_fnb {}
+footer .f_fnb li {}
+footer .f_fnb li a {}
+footer .f_fnb li a em {}
+footer address{}
+
