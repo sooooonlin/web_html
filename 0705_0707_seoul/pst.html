@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>Document</title>
+    <link href="./style/reset.css" rel="stylesheet">
+    <style>
+        #all { /*공통된 부모(모두에게 적용되는값)*/
+            width: 600px; height: 600px;
+            background-color: lightslategray;
+        }
+        #all .box{
+            border:2px solid black;
+            width: 200px; height: 200px;
+            display: inline-block;
+            margin-left: -6px;
+        }
+        #all .a{
+            background-color: yellow;
+        }
+        #all .b{
+            background-color: pink;
+            /*relative 현재 위치 기준*/
+            position:relative;
+            top:0;  right: 0;/*top,btm,l,r를 쓸때 꼭 position:relative를 써야 적용이 된다.*/ /*같은 x,y 똑같은 좌표에 값을 두개이상 쓰면 안됨*/
+        }
+        #all .c{
+            background-color: aqua;
+        }
+        #all .d{
+            background-color: lime;
+            /*absolute는 부모기준 상대위치*/
+            /*현재 자신의 위치를 해제하게 된다. -> 부유하게 됨(float처럼)*/
+            /*부유하면서 형제 요소와 중첩 가능하게 된다 (absolute의 장점)*/
+            /*태그상의 부모가 아닌 position속성과 함깨 있는 부모태그 또는 position속성 부모가 없을경우  body를 인식한다*/
+            position:absolute;
+            right: 0; bottom: 0;
+        }
+
+        #wrap1 {
+            background-color: aqua;
+            width: 800px; height: 600px;
+            padding:50px;
+            position: relative;
+        }
+        #wrap1 #wrap2 {
+            background-color: yellow;
+            width: 600px; height: 500px;
+            padding: 50px;
+            position: relative /*포지션이 들어있는 부모 중 가장 가까운 부모에게 간다*/
+        }
+        #wrap1 #wrap2 #wrap3 {
+            background-color: lime;
+            width: 400px; height: 400px; padding: 50px;
+            position: relative
+        }
+        #wrap1 #wrap2 #wrap3 h1 {
+            width: 100px; height: 100px;
+            border: 5px solid black;
+            position: fixed; /*사뿐퀵메뉴 고정*/
+            right: 0; top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="all">
+        <div class="box a">A</div>
+        <div class="box b">B</div>
+        <div class="box c">C</div>
+        <div class="box d">D</div>
+    </div>
+    <hr>
+    <div id="wrap1">
+        <div id="wrap2">
+            <div id="wrap3">
+                <h1>제목</h1>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
