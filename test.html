@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>test</title>
+    <link rel="stylesheet" href="./style/reset.css">
+    <style>
+        html,body {
+            background:aqua url(./images/news_img08.jpg) no-repeat fixed center/*x축*/ bottom;/*y축*//*repeat값을 적지않으면 반복해서나옴*/
+            background-size:700px; /*cover-화면크기에 맞게 이미지가 들어감(자동적으로)/원하는 사이즈가 있으면 그대로 적으면됨*/
+            height: 200%; /*높이가 길어져서 스크롤이 만들어짐*/
+        }
+        #bg{
+            background-color: rgba(255,255,255,0.8);
+            position: relative;
+        } /*0.8->80%의 투명도*/
+        #bg p{ /*p는 block이므로 너비는 100%*/ /*공통선택자*/
+            background: yellow url(./images/news_img02.jpg) no-repeat; /*이미지반복x*/
+            width: 400px; height: 200px; 
+            border: 5px solid black; /*통합속성명*/
+        }
+        #bg p:nth-child(2) {
+            border-color:plum;
+            left: 100px; position: relative; /*maring-left xx / 포지션을 이용함*/
+        } /*border로 쓰는것이 아니라 그중에 색만 바꾸고 싶은거니까 border-color: 로 콕 집어서 선택해야함 == 개별속성명*/
+        #bg p:last-child/*:nth-child(3)*/{background-repeat:repeat-x; right:0; bottom: 0; position:absolute; } /*부모의 오른쪽과 바닥의 끝에 붙게 만들려면 right:0; bottom:0;*/
+    </style>
+</head>
+<body>
+    <div id="bg"> <!--내용을 안쓰면 높이가 0-->
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+    <h1>vs code emmet</h1>
+    <p><em>부모>자식</em></p> <!--부모와 자식 p>em하고 tap키-->
+    <p><span>1</span><span>2</span></p> <!--부모와 자식2개 p>em*2-->
+    <p>동일 관계(형제)의 요소를 2개이상 제작하고 싶을땐 곱하기(*)를 붙여서 emmet기능을 실행한다.</p>
+    <ul>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+    </ul> <!--ul안에 li자식이 *4 자손이 *1 (ul>li*4>a) 동일관계(형제)일때만 *사용-->
+    <p>ul>li*4>a</p>
+    <p>div>p*5</p>
+    <p>header>h1+nav+p</p>
+    <p>div.test>p>em</p>
+    <p>div.#box>section.contents>h1+p</p>
+    <div>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </div> <!--div부모 p는 자식 (div>p*5)-->
+    <header>
+        <h1>header>h1+nav+p</h1>
+        <nav></nav>
+        <p></p>
+    </header> <!--header는 부모 h1,nav,p는 자식/ 동일관계(형제)는 '+'로 표시(header>h1+nav+p)-->
+    <div class="test">
+        <p><em></em></p>
+    </div> <!--div class는 div'.'을 붙여 div.test-->
+    <div id="box">
+        <section class="contents">
+            <h1></h1>
+            <p></p>
+        </section> <!--div id는 div'#'을 붙여 div#box section->.contents-->
+    </div>
+    <img src="./images/news_img01.jpg" alt="서울시청"> <!--경로연결 후 tap키를 치면 alt로 바로 넘어감-->
+    <video src="#"></video>
+    <form action=""></form>
+    <form action="" method="post"></form> <!--form:post/get로 입력 시 method 나옴-->
+    <input type="text">
+    <button></button>
+    <button type="submit"></button> <!--button:submit 입력-->
+    <label for=""><input type="checkbox" name="" id=""></label> <!--label>input:checkbox-->
+    <table> <!--2행2열-->
+        <thead>
+            <tr>
+                <th>table>thead>tr>th*2</th> <!--제목-->
+                <th></th> 
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>tbody>tr>td*2</td> <!--내용-->
+                <td></td>
+            </tr>
+        </tbody>
+    </table> <!--div.right>form:get#langfrm>fieldset>legend+select>option*2+button:submit#lang_btn-->
+    <div class="right">
+        <form action="#" method="get" id="langfrm"></form>
+            <fieldset>
+                <legend>언어선택양식</legend>
+                <select name="lang" id=""> s
+                    <option value="en"></option>
+                    <option value="ko"></option>
+                    <button type="submit" id="lang_btn"></button>
+                </select>
+            </fieldset>
+        </form>
+        <div class="weather"> <!--div.right>form:get+div.weather(형제태그먼저만들때는이렇게)-->
+            <p class="current_weather"><em></em></p>
+            <p class="current_dust"></p>
+        </div>
+    </div>
+</body>
+</html>

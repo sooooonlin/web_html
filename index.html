@@ -5,177 +5,340 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="">
     <meta name="description" content="">
-    <title>1등 여성화쇼핑몰 사뿐 SAPPUN</title>
-    <!--파비콘-->
-    <link rel="shortcut icon" href="./images/favicon (1).ico" type="image/x-icon">
+    <title>서울특별시</title>
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <link rel="icon" href="파비콘.ico 경로" type="image/x-icon">
-    <!--외부스타일시트-->
+    <!-- 외부스타일 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="./style/reset.css" rel="stylesheet">
-    <link href="./style/sappun.css" rel="stylesheet">
+    <link href="./style/style.css" rel="stylesheet">
+    <style>
+    </style>
 </head>
 <body>
-    <!--header-->
-    <header>
-        <p><a href="#">롯데월드몰 팝업스토어 7DATS EVENT 07.07(화)-07.13(월)</a></p>
-        <div class="h_top">
-            <h1><a href="#"><img src="./images/logo.png" alt="SAPPUN"></a></h1> 
-            <div class="lnb">
-                <ul class="lnb_left">
-                    <li><a href="#">KR<img src="./images/arr.png" alt="언어선택"></a></li>
-                    <li><a href="#">LOGIN</a></li>
-                    <li>
-                        <a href="#">JOIN</a>
-                        <a href="#"><span>무료배송쿠폰</span></a>
-                    </li>
-                </ul>
-                <ul class="lnb_right">
-                    <li><a href="#"><img src="./images/common_search.png" alt="검색"></a><li>
-                    <li><a href="#"><img src="./images/common_my.png" alt="개인정보"></a></li>
-                    <li><a href="#"><img src="./images/common_cart02.png" alt="장바구니"></a></li>
-                    <li><a href="#"><img src="./images/common_menu.png" alt="전체메뉴"></a></li>
-                </ul>
+    <!-- 팝업요소 -->
+    <a href="#" id="top"><img src="./images/icon_controls/btn_top.png" alt="위로"></a>
+    <header> <!--형제부터 구성하는게 편함-->
+        <div id="h_top">
+            <div class="left">
+                <h1><a href="#"><img src="./images/sprite/seoul.png" alt="서울특별시"></a></h1>
+                <nav>
+                    <ul>
+                        <li><a href="#">서울소식</a></li>
+                        <li><a href="#">시민참여</a></li>
+                        <li><a href="#">분야별정보</a></li>
+                        <li><a href="#">서울소개</a></li>
+                        <li><a href="#">부서안내</a></li>
+                        <li><a href="#">정보공개</a></li> 
+                        <li><a href="#">응답소</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <ul class="right"> <!--div는 2개이상을 위해묶기때문에 ul class로 둔다!-->
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">나의서울</a></li>
+                <li><a href="#">전자우편</a></li>
+            </ul>
+        </div> 
+        <div id="h_btm">
+            <h1><a href="#"><img src="./images/sprite/logo_black.png" alt="I SEOUL U"></a></h1> <!--로고-->
+            <form action="#" method="get" id="search_frm"> <!--검색창만드는 태그--> 
+                <fieldset>
+                    <legend>검색양식</legend>
+                    <input type="search" name="search_txt" placeholder="검색어를 입력해주세요" autofocus></input> <!--autofocus 커서가 자동으로들어감-->
+                    <button type="submit" id="search_btn"><img src="./images/sprite/search.png" alt="검색"></button>
+                </fieldset>
+            </form> <!--언어설정-->
+            <div class="right">
+                <form action="#" method="get" id="langfrm"> <!--form의 형식이면 늘 써야함-->
+                    <fieldset>
+                        <legend>언어선택양식</legend>
+                        <select name="lang"> <!--그룹명-->
+                            <option value="en">ENGLISH</option>
+                            <option value="ko">KOREAN</option> <!--옵션(value)의 값을 적는다-->
+                        </select>
+                        <button type="submit" id="lang_btn">GO</button>
+                    </fieldset>
+                </form>
+                <div class="weather">
+                    <p class="current_weather"><em>27.5℃</em></p> <!--current:현재-->
+                    <p class="current_dust">미세먼지(좋음) 초미세먼지(보통)</p>
+                </div>
             </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#">NEW 10%</a></li>
-                <li><a href="#">BEST</a></li>
-                <li><a href="#">MADE</a></li>
-                <li><a href="#">SPECIAL</a></li>
-                <li><a href="#">SANDAL</a></li>
-                <li><a href="#">HEEL</a></li>
-                <li><a href="#">FLAT</a></li>
-                <li><a href="#">LOAFER</a></li>
-                <li><a href="#">SNEAKERS</a></li>
-                <li><a href="#">ANKLE</a></li>
-                <li><a href="#">BOOTS</a></li>
-                <li><a href="#">SOCKS</a></li>
-                <li><a href="#">ACC</a></li>
-                <li><a href="#">SALE</a></li>
-            </ul>
-        </nav>
-    </header>
-    <aside> <!--이 메뉴는 main과 형제-->
-        <a href="#"><img src="./images/quick01.png" alt="상세메뉴"></a>
-        <a href="#"><img src="./images/quick02.png" alt="네이버톡톡 문의"></a>
-        <a href="#"><img src="./images/quick03.png" alt="카카오톡 문의"></a>
-        <a href="#"><img src="./images/quick04.png" alt="위로"></a>
-        <a href="#"><img src="./images/quick05.png" alt="아래로"></a>
-    </aside>
-    <!--main-->
+    </header> 
     <main>
-        <div class="bnr_top"> 
-            <div class="main_bnr">
-                <a href="#"><img src="./images/main_banner_14.jpg" alt="메인배너"></a>
-            </div>
-            <div class="bnr2">
-                <a href="#"><img src="./images/banner02_img01.png" alt="당일발송(19시까지)"></a>
-                <a href="#"><img src="./images/banner02_img02.png" alt="포토리뷰"></a>
-                <a href="#"><img src="./images/banner02_img03.png" alt="오프라인 매장"></a>
-            </div>
-        </div>
-        <div class="item_warp">
-            <h1>WEEKLY BEST</h1>
-            <ul class="best_item">
-                <li>
-                    <a href="#"><img src="./images/0360010008023.gif" alt="item1"></a> <!--제품1-->
-                    <h2>[SAPPUN BASIC] 슈플린 메리제인 샌들힐 (5cm / 8cm)</h2>
-                    <p><em>35,900원</em></p>
-                    <div class="item_top">
-                        <p>215mm,260mm제작</p>
-                        <p>리뷰1,103</p>
-                    </div>
-                    <div class="item_btm">
-                        <span>BEST</span>
-                        <span>주문제작</span>
-                    </div>
-                </li>
-                <li>
-                    <a href="#"><img src="./images/0360010008023.gif" alt="item2"></a> <!--제품2-->
-                    <h2>[SAPPUN BASIC] 슈플린 메리제인 샌들힐 (5cm / 8cm)</h2>
-                    <p><em>35,900원</em></p>
-                    <div class="item_top">
-                        <p>215mm,260mm제작</p>
-                        <p>리뷰1,103</p>
-                    </div>
-                    <div class="item_btm">
-                        <span>BEST</span>
-                        <span>주문제작</span>
-                    </div>
-                </li>
-                <li>
-                    <a href="#"><img src="./images/0360010008023.gif" alt="item3"></a> <!--제품3-->
-                    <h2>[SAPPUN BASIC] 슈플린 메리제인 샌들힐 (5cm / 8cm)</h2>
-                    <p><em>35,900원</em></p>
-                    <div class="item_top">
-                        <p>215mm,260mm제작</p>
-                        <p>리뷰1,103</p>
-                    </div>
-                    <div class="item_btm">
-                        <span>BEST</span>
-                        <span>주문제작</span>
-                    </div>
-                </li>
-                <li>
-                    <a href="#"><img src="./images/0360010008023.gif" alt="item4"></a> <!--제품4-->
-                    <h2>[SAPPUN BASIC] 슈플린 메리제인 샌들힐 (5cm / 8cm)</h2>
-                    <p><em>35,900원</em></p>
-                    <div class="item_top">
-                        <p>215mm,260mm제작</p>
-                        <p>리뷰1,103</p>
-                    </div>
-                    <div class="item_btm">
-                        <span>BEST</span>
-                        <span>주문제작</span>
-                    </div>
-                </li>
-                <li>
-                    <a href="#"><img src="./images/0360010008023.gif" alt="item5"></a> <!--제품5-->
-                    <h2>[SAPPUN BASIC] 슈플린 메리제인 샌들힐 (5cm / 8cm)</h2>
-                    <p><em>35,900원</em></p>
-                    <div class="item_top">
-                        <p>215mm,260mm제작</p>
-                        <p>리뷰1,103</p>
-                    </div>
-                    <div class="item_btm">
-                        <span>BEST</span>
-                        <span>주문제작</span>
-                    </div>
-                </li>
-                <li>
-                    <a href="#"><img src="./images/0360010008023.gif" alt="item6"></a> <!--제품6-->
-                    <h2>[SAPPUN BASIC] 슈플린 메리제인 샌들힐 (5cm / 8cm)</h2>
-                    <p><em>35,900원</em></p>
-                    <div class="item_top">
-                        <p>215mm,260mm제작</p>
-                        <p>리뷰1,103</p>
-                    </div>
-                    <div class="item_btm">
-                        <span>BEST</span>
-                        <span>주문제작</span>
-                    </div>
-                </li>
-            </ul>
-            <div class="sappun_made_bnr">
-                <img src="./images/made_img.jpg" alt="">
-                <h1>SAPPUN MADE</h1>
-                <a href="#">shop now</a>
+        <div class="visual"> 
+            <div class="left">
+                <img src="./images/banner_main.jpg" alt="코로나가 심해져 8월 16일부터 사회적 거리두기 2단계 격상 하여 2주간 외출 자체,마스크착용,손 씻기,2m 거리두기를 시행합니다.
+                코로나 19를 멈추기 위해 우리도 잠시 멈춰요.">
+                <a href="#" class="close">X 닫기</a> <!--닫기버튼-->
+            </div> 
+            <div class="right">
+                <a herf=# class="covid"> <!-- div->a / a를 상황에따라 block로 쓸수있다. -->
+                    <span class="date" title="코로나19 현황">20.08.18.00시 기준</span> <!--span class=글자끼리 모이게 하기 위해서-->
+                    <span class ="data data1" title="확진자">2,209</span> <!--title추가로 설명을 붙여주기!--> <!--마우스를 갖다대면 title의 이름이 뜸-->
+                    <span class="data data2" title="추가 확진자">132</span>
+                    <span class="data data3" title="퇴원">1,573</span>
+                    <span class="data data4" title="추가퇴원">2</span>
+                    <span class="data data5" title="사망">14</span>
+                    <img src="./images/bg_corona.gif" alt="발생 동향 전체보기"> <!--inline끼리 태그를 모으는게 가벼우니까 span사용 (img도 inline)-->
+                </a>
+                <div class="traffic">
+                    <img src="./images/banner_traffic.gif" alt="실시간 교통정보 안내">
+                </div>
             </div>
         </div>
+        <section class="service"> <!--큰 틀-->
+            <div class="title"> <!--1번째줄-->
+                <h2>주요서비스</h2>
+                <a href="#" class="site">전체서비스</a> 
+            </div>
+            <div class=contents> <!--2번째줄--> <!--ul을 써도 되지만 li가 필요한경우가
+            아니면 간단하게 쓰는편이 좋다->a태그안에 쓰기/서브메뉴는 li를 꼭 써야함-->
+                <a herf="#">
+                    <img src="./images/icon_service/icon_set_service_01.png" alt="">
+                    <span>응답소(민원신고)</span>
+                </a>
+                <a herf="#">
+                    <img src="./images/icon_service/icon_set_service_02.png" alt="">
+                    <span>민주주의서울</span>
+                </a>
+                <a herf="#">
+                    <img src="./images/icon_service/icon_set_service_03.png" alt="">
+                    <span>서울일자리</span>
+                </a>
+                <a herf="#">
+                    <img src="./images/icon_service/icon_set_service_04.png" alt="">
+                    <span>평생학습포털</span>
+                </a>
+                <a herf="#">
+                    <img src="./images/icon_service/icon_set_service_05.png" alt="">
+                    <span>우리동네키움포털</span>
+                </a>
+                <a herf="#">
+                    <img src="./images/icon_service/icon_set_service_06.png" alt="">
+                    <span>부동산정보</span>
+                </a>
+                <a herf="#">
+                    <img src="./images/icon_service/icon_set_service_07.png" alt="">
+                    <span>공공서비스예약</span>
+                </a>
+                <a herf="#">
+                    <img src="./images/icon_service/icon_set_service_01.png" alt="">
+                    <span>서울관광</span>
+                </a>
+                <a herf="#">
+                    <img src="./images/icon_service/icon_set_service_01.png" alt="">
+                    <span>서울주거포털</span>
+                </a>
+                <a herf="#">
+                    <img src="./images/icon_service/icon_set_service_01.png" alt="">
+                    <span>공약&매니페스토</span>
+                </a>
+                <a herf="#">
+                    <img src="./images/icon_service/icon_set_service_01.png" alt="">
+                    <span>시의회</span>
+                </a>
+            </div>
+        </section>
+        <div class="bnr_bg"> <!--배경이 있음 100% full bg--> <!--그룹선택자XX-->
+            <section class="bnr"> <!--w1152px-->
+                <a href="#"><img src="./images/banner_01.jpg" alt="서울 시민 누구나 코로나 19 선제검사 신청"></a>
+                <a href="#"><img src="./images/banner_02.jpg" alt="코로나19 신고센터 집단감염 위험 준수사항"></a>
+                <a href="#"><img src="./images/banner_03.jpg" alt="한눈에 보는 코로나 19 생활경제 지원 정책"></a>
+            </section>
+        </div>
+        <section class="board">
+            <div class="event"> <!--1번째-->
+                <div class="title">
+                    <h2>이벤트신청</h2>
+                    <a href="#" class="more" ><i class="fa-regular fa-square-plus" title="더보기"></i></a> 
+                </div>
+                <div class="contents"> 
+                    <a href="#">
+                        <span class="administrative">행정</span> <!--카테고리 이름-->
+                        <span>2020년 상반기 서울시 학자금대출 이자지원 신청...
+                        </span> <!--d-->
+                    </a>
+                    <a href="#">
+                        <span class="environment">환경</span>
+                        <span>2020년 상반기 서울시 학자금대출 이자지원 신청...</span>
+                    </a>
+                    <a href="#">
+                        <span class="welfare">복지</span>
+                        <span>2020년 상반기 서울시 학자금대출 이자지원 신청...</span>
+                    </a>
+                    <a href="#">
+                        <span class="housing">주택</span>
+                        <span>2020.09.15 골목길재생 아이디어 공모전 사업을 ...</span>
+                    </a>
+                    <a href="#">
+                        <span class="culture">문화</span>
+                        <span>2020년 서울지식이음축제포럼 자원활동가를 모...</span>
+                    </a>
+                </div>
+            </div>
+            <div class="festival"> <!--2번째-->
+                <div class="title">
+                    <h2>이달의 행사 및 축제</h2>
+                    <a href="#" class="more" ><i class="fa-regular fa-square-plus" title="더보기"></i></a>
+                </div>
+                <div class="contents">
+                    <a href="#">
+                        <span class="environment">환경</span>
+                        <span>식물학자 씨앗,발견하다</span>
+                    </a>
+                    <a href="#">
+                        <span class="economy">경제</span>
+                        <span>서울사랑상품권&제로페이 이벤트 한눈에 보기</span>
+                    </a>
+                    <a href="#">
+                        <span class="culture">문화</span>
+                        <span>음악으로 힐링하는 2020 서울드럼 페스티벌</span>
+                    </a>
+                    <a href="#">
+                        <span class="culture">문화</span>
+                        <span>코로나로 지친 시민 응원 &lt;문화로 토닥토닥 &gt; 8...</span>
+                    </a>
+                    <a href="#">
+                        <span class="culture">문화</span>
+                        <span>서울로 미디어 캔버스 2020년 2회전시 2부</span>
+                    </a>
+                </div>
+            </div>
+            <div class="service"> <!--3번째-->
+                <div class="title"> <!--1개만 들어가지만 div class로 묶는이유:디자인통일을 위해서!! (앞에 묶여있는 태그들에도 div가 들어감)-->
+                    <h2>자주찾는 서비스</h2>
+                </div>
+                <div class="contents">
+                    <a href="#">지방세납부</a>
+                    <a href="#">평생학습포털</a>
+                    <a href="#">서울일자리포털</a>
+                    <a href="#">내손안에서울</a>
+                    <a href="#">서울부동산 정보광장</a>
+                    <a href="#">복지포털</a>
+                    <a href="#">인재개발원</a>
+                    <a href="#">서울청년포털</a>
+                    <a href="#">공공서비스예약</a>
+                    <a href="#">조직도</a>
+                </div>
+            </div>
+        </section>
+        <section class="field_info">
+            <div class="title">
+                <h2>분야별 정보</h2>
+            </div>
+            <div class="contents">
+                <a href="#">
+                    <img src="./images/icon_set/shorcut_icon_set_01.png" alt="">
+                    <span>주택</span>
+                </a>
+                <a href="#">
+                    <img src="./images/icon_set/shorcut_icon_set_03.png" alt="">
+                    <span>경제</span>
+                </a>
+                <a href="#">
+                    <img src="./images/icon_set/shorcut_icon_set_05.png" alt="">
+                    <span>교통</span>
+                </a>
+                <a href="#">
+                    <img src="./images/icon_set/shorcut_icon_set_07.png" alt="">
+                    <span>환경</span>
+                </a>
+                <a href="#">
+                    <img src="./images/icon_set/shorcut_icon_set_09.png" alt="">
+                    <span>복지</span>
+                </a>
+                <a href="#">
+                    <img src="./images/icon_set/shorcut_icon_set_11.png" alt="">
+                    <span>안전</span>
+                </a>
+                <a href="#">
+                    <img src="./images/icon_set/shorcut_icon_set_13.png" alt="">
+                    <span>문화</span>
+                </a>
+                <a href="#">
+                    <img src="./images/icon_set/shorcut_icon_set_15.png" alt="">
+                    <span>행정</span>
+                </a>
+            </div>
+        </section>
+        <section class="news">
+            <div class="title">
+                <h2>새소식</h2>
+                <a href="#" class="site">전체보기</a>
+            </div>
+            <div class="contents">
+                <a href="#">
+                    <img src="./images/news_img01.jpg" alt="">
+                    <span>서울시,8.15(토)부터 총7,560개소 종교시설
+                        집합제한 행정명령</span>
+                </a>
+                <a href="#">
+                    <img src="./images/news_img02.jpg" alt="">
+                    <span>서울시 올 상반기 약 1만쌍 신혼부부에게 임차보증금 이자지원</span>
+                </a>
+                <a href="#">
+                    <img src="./images/news_img03.jpg" alt="">
+                    <span>코로나19 생활속 거리두기 어르신 중장년층을 위한 실천방법안내</span>
+                </a>
+                <a href="#">
+                    <img src="./images/news_img04.jpg" alt="">
+                    <span>서울시 10월까지 온라인 독서문화축제 북적부적 캠페인 참여행사 풍성</span>
+                </a>
+                <a href="#">
+                    <img src="./images/news_img05.jpg" alt="">
+                    <span>서울시 11만호 주택공급 속도 TF구성해 추진상황 지속 점검</span>
+                </a>
+                <a href="#">
+                    <img src="./images/news_img06.jpg" alt="">
+                    <span>서울 공공한옥 임시휴관안내 8/16~8/20</span>
+                </a>
+                <a href="#">
+                    <img src="./images/news_img07.jpg" alt="">
+                    <span>도시건축혁신 시범사업 전시회 (서울도시건축센터 1층/8.19~9.19)</span>
+                </a>
+                <a href="#">
+                    <img src="./images/news_img08.jpg" alt="">
+                    <span>시민의 삶을 바꾸는 앞으로 10년 서울미래지도</span>
+                </a>
+            </div>
+        </section>
     </main>
-    <!--footer-->
     <footer>
-        <ul class="f_fnb">
-            <li><a href="#">이용약관</a></li>
-            <li><a href="#"><em>개인정보처리방침</em></a></li>
-            <li><a href="#">이용안내</a></li>
-            <li><a href="#">오프라인샵 안내</a></li>
-        </ul>
-        <address>
-            COMPANY. (주)에프엔에스리테일 | TEL. 1544-2767 | E-MAIL. biz@fnsretail.com | ADDRESS. 5F, 45, Apgujeong-ro 2-gil, Gangnam-gu, Seoul, Republic of Korea<br>
-            OWNER. 박정수 | BUSINESS LICENSE. 201-86-40287 | MAIL-ORDER LICENSE. 제2017호-서울강남-01471호 | 개인정보 보호 책임자. 박연수<br>
-            고객님은 안전거래를 위해 현금으로 결제 시 저희 쇼핑몰에 가입한 구매안전서비스를 이용하실 수 있습니다.
-        </address>
+        <div class="top">
+            <div class="left">
+                <a href="#"><span>홈페이지 도우미</span></a>
+                <a href="#"><span>개인정보처리방침</span></a>
+                <a href="#"><span>저작권 정책</span></a>
+                <a href="#"><span>영상정보처리기기 운영 관리방침</span></a>
+                <a href="#"><span>홈페이지 바로잡기</span></a>
+                <a href="#"><span>사이트맵</span></a>
+            </div>
+            <div class="right"> <!--a태그안에 글자넣고 닫기(단순text) 맨왼쪽-응답소(민원신고)-->
+                <a href="#">응답소(민원신고)</a>
+                <a href="#">페이스북</a>
+                <a href="#">트위터</a>
+                <a href="#">인스타그램</a>
+                <a href="#">카카오 스토리</a>
+                <a href="#">유튜브</a>
+            </div> 
+        </div>
+        <div class="btm">
+            <div class="left">
+                <p><img src="./images/call.jpg" alt="문의 120"></p>
+                <address>서울특별시청 04524 서울특별시 중구 세종대로 110 <a href="#">찾아오시는 길</a><br>
+                    대표전화 : 02-123 또는 02-123-1234<br>
+                    © Seoul Metropolitan<br> Govermment all rights reserved
+                </address>
+            </div>
+            <div class="right">
+                <a href="#"><img src="./images/ft_mark_01.png" alt="imsp-p"></a>
+                <a href="#"><img src="./images/ft_mark_02.png" alt=""></a>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

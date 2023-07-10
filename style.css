@@ -1,0 +1,416 @@
+
+/*너비와 margin-0 auto;가 정해져있는 요소에 일일히 값을 부여하지않아도된다(아래글참고*/
+/*all layout*/ /* ','를 쓰고 다음 선택자를 쓰면 새로운 선택자가 된다(부모,자식,자손xx)*/
+#top {
+    position:fixed; 
+    right:50px; bottom:50px;
+    width:34px; height: 34px;
+}
+
+#top img {width: 100%}
+
+header, main .visual, main .service, main .bnr_bg .bnr, main .board, main .field_info, main .news, footer
+{ 
+    background-color: lightcoral;
+    width:1152px; margin: 0 auto;
+}
+header { /*header 큰 틀*/
+}
+/*header-h top(자식1)*/ /*부모인 header의 block자식으므로 부모의 너비를 100%따라가므로 headr h_top h_btm의 너비를 쓸필요없다*/
+header #h_top{
+    background-color: teal;
+    height: 48px;
+}
+header #h_top .left{ 
+    background-color: lightsalmon;
+    float: left;
+    
+}
+header #h_top .left h1{ /*이미지.로고 크기 넣어야함(피그마)*/
+    float: left;
+    width: 110px; height: 28px;
+    padding-top: 10px;
+}
+header #h_top .left h1 a{}
+header #h_top .left h1 a img{
+    width: 100% /*이미지는 부모의 값을 받을수있도록 100%를 넣어서 무조건 맞춰줘야함(img태그의 특성)*/
+}
+header #h_top .left nav{
+    float: left;
+}
+header #h_top .left nav ul{
+}
+header #h_top .left nav ul li{
+    float: left;
+    margin-left: 20px; /*nav에 주게 padding-right값으로 20을 주게 되면 응답소 뒤에 여백이 남기때문에 li에
+    magin-left를 준다*/ /*line-heigth*/
+}
+header #h_top .left nav ul li a{
+    line-height: 48px;
+    letter-spacing: -0.02em; /*글자는 16px로 기본이므로 쓸필요xx*/
+}
+header #h_top .right{
+    background-color: lightseagreen;
+    float: right;
+
+}
+header #h_top .right li{
+    float: left;
+    margin-left: 20px;
+}
+header #h_top .right li:nth-child(1){margin-left: 0;} /*li:first-child도 가능함*/
+header #h_top .right li a{
+    line-height: 48px; /*line-heigth*/
+}
+/*header-h btm (자식2)*/
+header #h_btm {
+    background-color: lightgrey;
+    height: 119px;
+}
+header #h_btm h1 {
+    background-color: aquamarine;
+    float: left;
+    width: 150px; height: 28px;
+    margin-top: 45.5px;
+}
+header #h_btm h1 a {}
+header #h_btm h1 a img {
+    width: 100%;
+}
+header #h_btm #search_frm { /*검색창 길이*/
+    float: left; 
+    margin:36px 0 0 230.5px;
+    width: 369px; height: 46px;
+    border: 2px solid #1e6eb3;
+    padding: 10px 20px 0; /*검색어 입력칸과 검색버튼이 같이 밑으로 내려오게됨*/
+}
+header #h_btm #search_frm  fieldset{border: 0;}
+header #h_btm #search_frm  fieldset legend{
+    display: none;
+}
+header #h_btm #search_frm  fieldset input{
+    float: left;
+    width: calc(100% - 15px); /*전체길이=100% - 검색창의 가로너비*/
+}  
+header #h_btm #search_frm  fieldset input::placeholder {
+    letter-spacing: -0.02em; color:#1e6eb3
+}
+header #h_btm #search_frm  fieldset #search_btn{
+    border:0;
+    background: none; /**/
+    width: 15px; height: 15px;
+    float: right;
+    cursor:pointer;
+}
+header #h_btm #search_frm  fieldset #search_btn img{}
+header #h_btm .right {
+    float: right;
+}
+header #h_btm .right #langfrm {
+    text-align:right; /*inline 성격을 지니므로 text align을 씀 block 써도 결과는 똑같음*/
+    margin-top: 21.5px;
+}
+header #h_btm .right #langfrm fieldset {
+    border: 0;
+}
+header #h_btm .right #langfrm fieldset legend {
+    display: none;
+}
+header #h_btm .right #langfrm fieldset select {
+    /* margin-right: 10px; */
+    font-size: 0.813rem;
+    line-height: -0.02em;
+    width: 93px;
+    padding: 3px 0;
+    border:1px solid #1e6eb3;
+}
+header #h_btm .right #langfrm fieldset select option {
+}
+header #h_btm .right #langfrm fieldset #lang_btn {
+    width: 27px; height: 27px;
+    background-color: #1e6eb3;
+    color: #fff;
+    /* border: 1px solid #000; */
+    /* padding: 5px 4px; */
+    cursor:pointer;
+    border: 0;
+}
+header #h_btm .right .weather{}
+header #h_btm .right .weather .current_weather{
+}
+header #h_btm .right .weather .current_weather em{
+    font-weight: 500;
+    font-size: 2.074rem;
+    letter-spacing: -0.02em;
+}
+header #h_btm .right .weather .current_dust{
+    letter-spacing: -0.02em;
+    font-size: 0.8333rem;
+}
+/*main*/
+main {} 
+/*main-1 메인광고*/
+main .visual{
+    background-color: cadetblue;
+    overflow: hidden;
+}
+main .visual .left{
+    background-color: lightgrey;
+    width: 770px; height: 350px;
+    position: relative; /*겹치는 대상 부모기준*/
+    float: left;
+
+}
+main .visual .left img{
+    width: 100%
+}
+main .visual .left .close{
+    /* width: 62px; height: 32px; */ /*크기적을필요x 피그마에선 hug로 되어있음*/
+    border: 1px solid black;
+    letter-spacing: -0.02em;
+    padding: 8px;
+    font-weight: 500;
+    background-color: #1e6eb3;
+    color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    right: 10px; bottom: 10px;
+    
+}
+main .visual .right{
+    background-color: beige;
+    width: 360px;
+    float: right;
+}
+main .visual .right .covid{
+    width: 360px; height: 230px;
+    position: relative;
+    display:block;
+    /*display를 걸지 않으면 인라인으로 밑으로 떨어져있음!!*/
+    margin-bottom: 10px; /*코로나19현황 사진과 서울시 실시간 교통정보 안내 사진 사이에 10px을 줌!!*/
+}
+main .visual .right .covid span{ /*span선택자를 만들어서 span이 들어가는 모든 태그 적용(date,data에 따로 적을필요xx)*/
+    position: absolute;
+    background-color: aqua;
+}
+main .visual .right .covid .date{
+    right:27px ; top: 22px;
+}
+main .visual .right .covid .data {
+}
+main .visual .right .covid .data1{
+    top:84px; left:84px
+}
+main .visual .right .covid .data2 {
+    top:84px; right: 82px;
+}
+main .visual .right .covid .data3 {
+    left: 60px; bottom: 55px
+}
+main .visual .right .covid .data4 {
+    left: 188px; bottom: 55px;
+}
+main .visual .right .covid .data5 {
+    right: 56px; bottom: 55px;
+}
+main .visual .right .covid .img {} 
+main .traffic {}
+main .traffic  img{}
+
+/*주요서비스~새소식 제목디자인그룹 (연습용)*/
+/*정리후*/ /*정리하는 이유 피그마에 공통적으로 타이틀부분의 디자인은 똑같이 만들어져있으므로 한꺼번에 css적용해주기 위해서!!*/
+main section .title {
+    background-color: lightskyblue;
+    padding: 50px 0 10px; /*상 좌우 하*/
+    border-bottom: 1px solid #aaa;
+    overflow: hidden; /**/
+}
+main section .title h2{
+    font-size: 1.44rem; font-weight: 500;
+    letter-spacing: -0.02em;
+    float: left;
+}
+main section .title .site{
+    float: right;
+    border: 1px solid #aaa;
+    padding: 10px;
+}
+main section .title .more{
+    float: right; 
+}
+main section .title .more i {font-size: 30px;}
+/*정리전*/ /*service,board,field info,news는 section class로 섹션으로 나누어져있음*/
+/* main .service .title{}
+main .service .title h2{}
+main .service .title h2 .site{}
+main .board .event .title{}
+main .board .event .title h2{}
+main .board .event .title .more {}
+main .board .festival .title{}
+main .board .festival .title h2{}
+main .board .festival .title .more{}
+main .board .service .title{}
+main .board .service .title h2{}
+main .field_info .title{}
+main .field_info .title h2{}
+main .news .title {}
+main .news .title h2 {}
+main .news .title h2 .more {} */
+/*main-2주요서비스*/
+main .service {}
+main .service .title{}
+main .service .title h2{}
+main .service .title h2 .site{}
+main .service .contents{
+    padding:20px;
+    overflow: hidden;
+}
+main .service .contents a{
+    /* width: 60px; height: 60px; */
+    float: left; width:9.09%;/* 100/11 */
+    text-align: center;
+}
+main .service .contents a img{}
+main .service .contents a span{
+    display: block;
+    font-size: 0.833rem; letter-spacing: -0.02em;
+}
+/*main-3배너*/
+main .bnr_bg {
+    background-color:#eff4f8;
+    padding: 50px 0;
+}
+main .bnr_bg .bnr{overflow: hidden;}
+main .bnr_bg .bnr a{float: left;}
+main .bnr_bg .bnr a img{}
+/*main-4게시판*/
+main .board{overflow: hidden;}
+/*main-4게시판 그룹모음*/
+main .board > div {
+    width:calc(33.33% - 22px);
+    float: left;
+    /* margin-right: 22px; */
+}
+main .board > div .title {height: 90px;} /*아이콘으로 인해서 이벤트신청,이달의행사헤더부분이 밑으로 내려와있어서 자주찾는서비스와 헤더높이를 같게 하기 위해서 높이를 고정시킴*/
+main .board .event{}
+main .board .festival {margin: 0 22px;}
+main .board .service {/*margin-right: 0;*/ width: 33.33%;/*-->여백을 사라지게 만듦*/}
+/*main-4게시판 카테고리*/
+main .board div .contents a .administrative{color: #028ab6;}
+main .board div .contents a .environment{color: #599100;}
+main .board div .contents a .welfare{color: #d76000;}
+main .board div .contents a .housing{color: #c35c3c;}
+main .board div .contents a .culture{color:#9b64d3;}
+main .board div .contents a .economy{color: #069363;}
+/*main-4 게시판 이벤트신청,행사축제 공통내용*/
+main .board .event .contents,
+main .board .festival .contents{margin-top: 17px;}
+main .board .event .contents a,
+main .board .festival .contents a{
+    display: block;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+main .board .event .contents a:last-child, 
+main .board .festival .contents a:last-child {margin-bottom: 0;} 
+main .board .event .contents a span,
+main .board .festival .contents a span{float: left; letter-spacing: -0.02em;}
+main .board .event .contents a span:first-child,
+main .board .festival .contents a span:first-child{margin-right: 10px; float: left;}
+main .board .event .contents a span:last-child,
+main .board .festival .contents a span:last-child{
+    white-space: nowrap; /*줄바꿈을 안되게 해주는 것*/
+    text-overflow:ellipsis; /*말줄임표 '...'*/
+    overflow: hidden;/*영역에 나온 부분을 숨겨주는 역할*/
+    background-color: aquamarine;
+    float: right;
+    width: 85%;
+}
+/*main-4게시판 개별내용*/
+main .board .event .title{}
+main .board .event .title h2{}
+main .board .event .title .more {} 
+main .board .festival{}
+main .board .festival .title{}
+main .board .festival .title h2{}
+main .board .festival .title .more{}
+
+main .board .service .title{border: 0;}
+main .board .service .title h2{}
+main .board .service .contents{
+    background-color: #eff4f8;
+    overflow: hidden;
+    padding: 13px;
+}
+main .board .service .contents a:nth-last-child(2),
+main .board .service .contents a:last-child{margin-bottom: 0;}
+main .board .service .contents a{
+    float: left; width: 50%;
+    text-align: left;
+    margin-bottom: 25px;
+}
+/*main-5분야정보*/
+main .field_info{}
+main .field_info .title{}
+main .field_info .title h2{}
+main .field_info .contents{overflow: hidden; padding: 20px 40px;} /*중요*/
+main .field_info .contents a{
+    float: left;
+    text-align: center;
+    width: 12.5%; /*(100/8)->너비가 auto일 경우!!!*/
+}
+main .field_info .contents a img{}
+main .field_info .contents a span{
+    display: block;
+    letter-spacing: -0.02em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/*main-6새소식*/
+main .news {}
+main .news .title {}
+main .news .title h2 {}
+main .news .title h2 .more {}
+main .news .contents {overflow: hidden;}
+main .news .contents a{
+    float: left; /* display: block; */ 
+    width: 25%;
+    margin-bottom:30px;
+}
+main .news .contents a img{}
+main .news .contents a span{
+    /* text-align: center; */
+    line-height: 26px;
+    letter-spacing: -0.06em;
+    float: left;
+    display: block;
+}
+/*footer-f top*/
+footer {}
+footer .top {
+    border:1px solid #aaa;
+    border-left:0; border-right:0;
+    overflow: hidden;
+    letter-spacing: -0.02em;
+}
+footer .top .left {float: left;}
+footer .top .left a{}
+footer .top .fnb a span{}
+footer .top .right{float: right;}
+footer .top .right a{}
+footer .top .right a:first-child{
+    background: white  url(../images/icon_sns2/icon_set_sns_01.png) no-repeat;
+    width: 25px; height: 25px;
+    display: inline-block;
+    text-indent: -9999px; /*화면밖으로 글자를 내보내기*/
+}
+/*footer-f btm*/
+footer .btm {}
+footer .btm .left{}
+footer .btm .left p{}
+footer .btm .left p img{}
+footer .btm .left address{}
+footer .btm .left address a{}
+footer .btm .right{}
+footer .btm .right a{}
+footer .btm .right a img{}
